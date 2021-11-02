@@ -1,0 +1,15 @@
+shared:
+    image: node:8
+    steps:
+        - create-artifacts: |
+           echo -n '{"name": "sample text 1"}' > ${SD_ARTIFACTS_DIR}/sample1.txt
+           echo -n '{"name": "sample text 2"}' > ${SD_ARTIFACTS_DIR}/sample2.txt
+jobs:
+    main:
+        requires: [~pr, ~commit]
+        environment:
+             SD_ZIP_ARTIFACTS: false
+    ziped:
+        requires: [~pr, ~commit]
+        environment:
+             SD_ZIP_ARTIFACTS: true
