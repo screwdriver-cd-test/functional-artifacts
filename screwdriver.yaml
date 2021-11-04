@@ -1,5 +1,5 @@
 shared:
-    image: node:8
+    image: node:14
     steps:
         - create-artifacts: |
            echo -n '{"name": "sample text 1"}' > ${SD_ARTIFACTS_DIR}/sample1.txt
