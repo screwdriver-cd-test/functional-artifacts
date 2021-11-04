@@ -9,7 +9,7 @@ jobs:
         requires: [~pr, ~commit]
         environment:
              SD_ZIP_ARTIFACTS: false
-    ziped:
+    zipped:
         requires: [~pr, ~commit]
         environment:
              SD_ZIP_ARTIFACTS: true
